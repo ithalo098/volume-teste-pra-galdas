@@ -1,0 +1,195 @@
+.settings-container {
+  min-height: 100vh;
+  padding: 2rem;
+  background: linear-gradient(135deg, hsl(var(--background)), hsl(var(--muted)));
+}
+
+.centered {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.backButton {
+  display: inline-block;
+  cursor: pointer;
+  margin-bottom: 1rem;
+  transition: transform 0.2s;
+}
+
+.backButton:hover {
+  transform: translateX(-4px);
+}
+
+.backButton svg {
+  width: 32px;
+  height: 32px;
+}
+
+.settings-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  color: hsl(var(--foreground));
+}
+
+.card {
+  background: hsl(var(--card));
+  border: 1px solid hsl(var(--border));
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.controls-settings .scheme-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.scheme-label {
+  font-weight: 600;
+  color: hsl(var(--foreground));
+}
+
+.scheme-options {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.scheme-btn {
+  padding: 0.5rem 1rem;
+  border: 2px solid hsl(var(--border));
+  background: hsl(var(--background));
+  color: hsl(var(--foreground));
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.scheme-btn:hover {
+  background: hsl(var(--accent));
+}
+
+.scheme-btn.active {
+  background: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+  border-color: hsl(var(--primary));
+}
+
+.helper {
+  color: hsl(var(--muted-foreground));
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.preview {
+  position: relative;
+  background: hsl(var(--muted));
+  border: 2px solid hsl(var(--border));
+  border-radius: 0.5rem;
+  margin: 1rem auto;
+  overflow: hidden;
+}
+
+.preview-player {
+  position: absolute;
+  background: hsl(var(--primary));
+  border-radius: 0.25rem;
+  transition: all 0.05s linear;
+}
+
+.key-indicators {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  display: grid;
+  grid-template-columns: repeat(3, 24px);
+  grid-template-rows: repeat(2, 24px);
+  gap: 4px;
+}
+
+.key {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: hsl(var(--background) / 0.8);
+  border: 1px solid hsl(var(--border));
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: bold;
+  color: hsl(var(--muted-foreground));
+  transition: all 0.1s;
+}
+
+.key.up {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.key.left {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.key.down {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.key.right {
+  grid-column: 3;
+  grid-row: 2;
+}
+
+.key.on {
+  background: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+  border-color: hsl(var(--primary));
+  transform: scale(1.1);
+}
+
+.position {
+  text-align: center;
+  color: hsl(var(--muted-foreground));
+  font-size: 0.9rem;
+  margin-top: 1rem;
+}
+
+/* Audio Settings */
+.section-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: hsl(var(--foreground));
+}
+
+.volume-control {
+  margin-bottom: 1.5rem;
+}
+
+.volume-control:last-child {
+  margin-bottom: 0;
+}
+
+.volume-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+  font-weight: 500;
+  color: hsl(var(--foreground));
+}
+
+.volume-value {
+  color: hsl(var(--primary));
+  font-weight: 600;
+  min-width: 45px;
+  text-align: right;
+}
+
+.volume-slider {
+  width: 100%;
+}
